@@ -46,6 +46,7 @@ body {
     gap: 5px;
     border-radius: 10px;
     padding-left: 10px;
+    position: relative;
 }
 
 .lupa img {
@@ -64,7 +65,18 @@ body {
 
 }
 
-.rodape{
+
+.elemento {
+    background-image: url('./img/lugar.png'); /* 1. Define a imagem */
+    background-repeat: no-repeat; /* 2. Evita que a imagem se repita */
+    background-position: center; /* 3. Centraliza a imagem */
+    background-size: cover; /* 4. Faz a imagem cobrir todo o elemento */
+    width: 100%; 
+    height: 800px; 
+  
+  }
+
+  .rodape{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,4 +84,8 @@ body {
     height: 100px;
     background-color: #5C9ACE;
 
+}
+
+.rodape p {
+    color: #fff;
 }
