@@ -64,42 +64,59 @@ body {
 
 }
 
-main p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: larger;
-    font-family: Cambria;
-    
-}
 
+
+/* Sua classe de contêiner de filmes */
 main .caixa-p {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Centraliza no contêiner */
     gap: 30px;
     flex-wrap: wrap;
-    padding: 30px
+    padding: 30px;
+    /* Ajustei para alinhar melhor o conteúdo na linha */
 }
 
-
+/* O contêiner de cada filme (Poster + Título) */
 main .foto{
     display: flex;
+    flex-direction: column; /* Coloca os elementos (img e p) em coluna */
     align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 200px;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    
+    /* Aumentei o tamanho para posters, que são mais altos que 200px */
+    height: 350px; 
+    width: 220px;
+    
     border: 2px solid black;
     border-radius: 10px;
-    object-fit: cover;
+    padding: 10px; /* Adiciona um padding interno */
+    cursor: pointer;
+    text-align: center;
 }
 main .foto:hover{
-    border: 4px solid blue;
+    border: 4px solid #5C9ACE; /* Use a cor da sua barra superior */
 }
+
+/* A imagem dentro da .foto (o poster) */
 main .foto img{
-    height: 100px;
-    width: 100px;
+    /* Garante que o poster preencha a largura e mantenha a proporção */
+    width: 100%; 
+    height: auto; 
+    max-height: 280px; /* Limita a altura do poster */
+    border-radius: 5px;
+    object-fit: contain; /* Garante que a imagem inteira caiba */
+    margin-bottom: 5px;
 } 
+
+/* Estilo para o título do filme dentro do poster */
+main .foto p {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: black;
+    margin-top: auto; /* Empurra o título para baixo, se houver espaço */
+}
+
+
 
  .rodape{
     display: flex;
