@@ -9,6 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: "Londrina Solid", sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -89,4 +90,60 @@ body {
 
 .rodape p {
     color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container {
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 120px;
+    }
+
+    .container a {
+        font-size: 18px;
+    }
+
+    .gato {
+        height: 90px;
+        width: 85px;
+    }
+
+    .elemento {
+        height: 600px;
+        background-position: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+
+    .gato {
+        height: 70px;
+        width: 65px;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    .elemento {
+        height: 350px;
+    }
+
+    footer .rodape {
+        height: 70px;
+    }
 }
